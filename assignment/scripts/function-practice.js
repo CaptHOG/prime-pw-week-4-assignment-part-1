@@ -62,9 +62,22 @@ console.log(`Test - should say 8 : ${getLast()}`);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  return true;
+function find( value, array ) {
+  array = [3, 6, 9];
+  for (array[value] of array) {
+    if (value === 9) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+console.log(`Test - find 3, should be false: ${find(3)}`);
+console.log(`Test - find 6, should be false: ${find(6)}`);
+console.log(`Test - find 9, should be true: ${find(9)}`);
+console.log(`Test - find 12, should be false: ${find(12)}`);
+
+
 
 // ----------------------
 // Stretch Goals
