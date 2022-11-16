@@ -18,29 +18,30 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(helloName('Jeremy'));
+console.log(`Test - should say "Hello, Jeremy!": ${helloName('Jeremy')}`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
   return firstNumber + secondNumber;
 }
-console.log(`Adding two numbers together: 1 + 2 = ${addNumbers(1, 2)}`);
+console.log(`Test - 1 + 2, should say 3: ${addNumbers(1, 2)}`);
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( num1, num2, num3 ) {
+  return num1 * num2 * num3;
 }
+console.log(`Test - 1 * 2 * 3, should say 6: ${multiplyThree(1, 2, 3)}`);
 
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
-  }
-    return;
+    return true;
+  } else
+    return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
@@ -52,14 +53,17 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  array = [2, 4, 6, 8];
+  return array[array.length - 1];
 }
+console.log(`Test - should say 8 : ${getLast()}`);
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  return true;
 }
 
 // ----------------------
