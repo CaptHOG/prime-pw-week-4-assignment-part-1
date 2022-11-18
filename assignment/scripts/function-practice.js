@@ -99,7 +99,7 @@ function sumAll() {
   array = [1, 2, 3, 4, 5];
   let sum = 0;
   // TODO: loop to add items
-  for (value of array) {
+  for (let value of array) {
     sum += value;
   }
   return sum;
@@ -109,6 +109,24 @@ console.log(`Test - 1 + 2 + 3 + 4 + 5, should be 15: ${sumAll()}`);
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+let inputArray = [-3, -2, -1, 0, 1, 2, 3];
+console.log('Starting array:', inputArray);
+function newArray() {
+  let positiveNumbers = inputArray.filter((num) => num > 0);
+  console.log(positiveNumbers);
+}
+console.log('New array after filter:');
+newArray();
+
+// testing #10 with all negative numbers
+let allNegative = [-3, -2, -1];
+console.log('Starting array:', allNegative);
+function newerArray() {
+  let emptyArray = allNegative.filter((num) => num > 0);
+  console.log(emptyArray);
+}
+console.log('Newer array after filter:');
+newerArray();
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
