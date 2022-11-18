@@ -120,7 +120,6 @@ function newArray() {
 }
 console.log(`New array after filter: ${newArray()}`);
 
-
 // testing #10 with all negative numbers
 let allNegative = [-3, -2, -1];
 console.log('Starting array:', allNegative);
