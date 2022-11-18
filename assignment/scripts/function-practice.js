@@ -20,6 +20,7 @@ function helloName( name ) {
 // Remember to call the function to test
 console.log(`Test - should say "Hello, Jeremy!": ${helloName('Jeremy')}`);
 
+
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
@@ -94,17 +95,19 @@ function isFirstLetter(letter, string) {
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
+
 // 9. Function to return the sum of all numbers in an array
 function sumAll() {
   array = [1, 2, 3, 4, 5];
   let sum = 0;
   // TODO: loop to add items
-  for (let value of array) {
+  for (value of array) {
     sum += value;
   }
   return sum;
 }
 console.log(`Test - 1 + 2 + 3 + 4 + 5, should be 15: ${sumAll()}`);
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -113,22 +116,33 @@ let inputArray = [-3, -2, -1, 0, 1, 2, 3];
 console.log('Starting array:', inputArray);
 function newArray() {
   let positiveNumbers = inputArray.filter((num) => num > 0);
-  console.log(positiveNumbers);
+  return positiveNumbers;
 }
-console.log('New array after filter:');
-newArray();
+console.log(`New array after filter: ${newArray()}`);
+
 
 // testing #10 with all negative numbers
 let allNegative = [-3, -2, -1];
 console.log('Starting array:', allNegative);
 function newerArray() {
   let emptyArray = allNegative.filter((num) => num > 0);
-  console.log(emptyArray);
+  return emptyArray;
 }
-console.log('Newer array after filter:');
-newerArray();
+console.log(`Newer array after filter: ${newerArray()}`);
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// Sum of polygon angles. Function that finds the sum of internal polygon angles
+// where n is the number of sides on the polygon.
+function sumPolygon(n) {
+	sum = (n - 2) * 180;
+	return sum;
+}
+console.log(`Three sided polygon: ${sumPolygon(3)}`);
+console.log(`Four sided polygon: ${sumPolygon(4)}`);
+console.log(`Five sided polygon: ${sumPolygon(5)}`);
+console.log(`Six sided polygon: ${sumPolygon(6)}`);
+console.log(`Eight sided polygon: ${sumPolygon(8)}`);
